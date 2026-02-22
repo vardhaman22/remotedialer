@@ -24,6 +24,7 @@ func (s *Server) AddPeer(url, id, token string) {
 		return
 	}
 
+	logrus.Infof("sending peer request with id:%v \n token:%v", id, token)
 	ctx, cancel := context.WithCancel(context.Background())
 	peer := peer{
 		url:    url,
