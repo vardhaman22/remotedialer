@@ -17,7 +17,7 @@ func (s *Session) serveMessage(ctx context.Context, reader io.Reader) error {
 	}
 
 	if PrintTunnelData {
-		logrus.Debug("REQUEST ", message)
+		logrus.Info("REQUEST ", message.String())
 	}
 
 	switch message.messageType {
